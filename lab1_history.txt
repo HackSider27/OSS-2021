@@ -1,0 +1,217 @@
+    1  ампмвпвм 
+    2  shell
+    3  type sh
+    4  rpm -qf /usr/bin/sh
+    5  ll /usr/bin/sh
+    6  eege
+    7  clear
+    8  vim test.ch
+    9  vim test.sh
+   10  nano test.sh
+   11  ls
+   12  rm test.sh Рабочий\ стол/
+   13  ды
+   14  ls
+   15  sleep 1h
+   16  clear
+   17  ll
+   18  cd Рабочий\ стол/
+   19  mkdir bos
+   20  sleep 1h
+   21  sleep 1s
+   22  sleep 1sec
+   23  read a
+   24  echo a
+   25  echo $a
+   26  read a
+   27  echo $a
+   28  clear a
+   29  clear $a
+   30  echo $a
+   31  clear
+   32  vim
+   33  ll
+   34  yum install -y bash-completion
+   35  sudo yum install -y bash-completion
+   36  yum install -y bash-completion
+   37  sudo yum install -y bash-comletion
+   38  openssl 
+   39  xsel
+   40  maxima
+   41  yum install -y maxima
+   42  sudo yum install -y maxima
+   43  clear
+   44  echo "It`s hard to do that@
+   45  clear
+   46  echo "It`s hard to do that"
+   47  echo "It`s hard to do that"
+   48  echo "It`s hard to do that" #efrg
+   49  echo rfeg
+   50  echo 'It`s hard to do that'
+   51  clear
+   52  echo 'It`s hard to do that'
+   53  echo 'It'\''s hard to do that'
+   54  echo 'It's hard to do that'
+   55  echo "It's hard to do that"
+   56  clear
+   57  echo "It's hard to do that"
+   58  echo 'It'\''s hard to do that'
+   59  echo "'example'"
+   60  #rergererhh
+   61  echo '#example'
+   62  echo 'wrgr'" sddf"' egregg'\ 'fwfwf'
+   63  echo 'wrgr'" sddf"' egregg' 'fwfwf'
+   64  whoami 
+   65  root
+   66  clear
+   67  whoami 
+   68  whoamim
+   69  whoami 
+   70  echo "Hello, World"
+   71  date
+   72  cal
+   73  man cal
+   74  cal -3
+   75  history 
+   76  clear
+   77  history 
+   78  pwd
+   79  cd /
+   80  cd ..
+   81  pwd
+   82  ls
+   83  ls /var/
+   84  cd ~
+   85  cd ..
+   86  ls
+   87  ls -l
+   88  cd ~
+   89  mkdir fruits
+   90  cd /
+   91  mkdir ~/animals
+   92  touch /tmp/temp
+   93  cd ~/fruits/
+   94  mkdir apple banana pineaple lion
+   95  rm apple banana/ pineaple/ lion/
+   96  rmdir apple banana/ pineaple/ lion/
+   97  > apple banana pineaple lion
+   98  > banana
+   99  > pineaple
+  100  > lion
+  101  touch ../animals/cat.txt
+  102  touch ../animals/dog.txt
+  103  touch ../animals/elephant.txt
+  104  date apple 
+  105  man ls
+  106  ls -a
+  107  ls -l
+  108  ls -l apple 
+  109  ls b*
+  110  ls *a
+  111  ls [bi]*
+  112  ls [ib]*
+  113  ls
+  114  ls b* i*
+  115  ls i*
+  116  cp /etc/passwd ~
+  117  cat /etc/issue
+  118  cp /etc/issue apple 
+  119  cat apple 
+  120  mv lion ../animals/
+  121  rnm pineaple pineapple
+  122  mv pineaple pineapple 
+  123  man wc
+  124  wc -l /etc/passwd
+  125  cd ~
+  126  ls -s /etc/passwd passwd_link
+  127  ln -s /etc/passwd passwd_link
+  128  ln .bash_history history_hard
+  129  ls ~/.bash_history 
+  130  ls -l
+  131  rm fruits/apple 
+  132  mkdir rmme
+  133  rmdir rmme/
+  134  rmdir fruits/
+  135  rm -fr fruits/
+  136  cat /etc/passwd /var/log/boot.log
+  137  cp /etc/init.d/ ~
+  138  cp -r /etc/init.d/ ~
+  139  rmdir init.d/
+  140  rmdir -rf init.d/
+  141  rm -rf init.d/
+  142  man sort
+  143  man cut
+  144  man less
+  145  man column
+  146  cut -d: -f1 /etc/passwd
+  147  man cut
+  148  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+  149  cut -d: -f1 /etc/passwd | sort
+  150  nano /etc/passwd
+  151  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+  152  cut -d: -f1,3 /etc/passwd | column -ts: | less
+  153  cut -d: -f1,3 /etc/passwd | column -ts: | less | sort
+  154  grep :/bin/bash /etc/passwd | wc -l
+  155  grep :/bin/bash /etc/passwd | column -ts:  |sort -r
+  156  rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2
+  157  rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2 | head -n25
+  158  rpm -ql man-db | xargs -l du 2> /dev/null | sort -n
+  159  top -b -n1 | sort -i
+  160  top -b -n1 | sort -k12
+  161  top -b -n1 | tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f11, 5
+  162  top -b -n1 | tail -n+8 | cut -c7 | tr -s ' ' '\t' | cut -f11, 5
+  163  top -b -n1 | tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f12, 5
+  164  top -b -n1 | tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f11,5
+  165  top -b -n1 | tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f12,5
+  166  top -b -n1 | tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f5,12
+  167  top -b -n1 | tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f12,5
+  168  top -b -n1 | tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f12 | cut -f5
+  169  top -b -n1 | tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f12,5
+  170  nano  /etc/passwd
+  171  sort -k1 /etc/passwd | tr ":" " "
+  172  nano /etc/passwd
+  173  cut -d: -f1,7 /etc/passwd | sort -k1
+  174  cut -d: -f1,7 /etc/passwd |  tr ":" " " | sort -k1
+  175  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -5
+  176  cd /usr/share/doc/git-*
+  177  yum install -y git
+  178  sudo yum install -y git
+  179  sudo yum install git
+  180  git --version
+  181  yum install wget unzip gettext-devel openssl-devel perl-CPAN perl-devel zlib-devel libcurl-devel expat-devel
+  182  sudo yum install wget unzip gettext-devel openssl-devel perl-CPAN perl-devel zlib-devel libcurl-devel expat-devel
+  183  yum install -y git
+  184  sudo yum install -y git
+  185  cd /usr/share/doc/git-*
+  186  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -5
+  187* cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr
+  188  cat user-manual.txt 
+  189  cat user-manual.txt | tr ' ' '\012' 
+  190  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' 
+  191  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' 
+  192  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' 
+  193  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c 
+  194  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn 
+  195* cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -5 
+  196  tr '[:lower:]' '[:upper:]' < user-manual.txt |  tr -d '[:punct:] \n\t' | fold -w1 | sort | uniq -c | sort -rn | head -5
+  197  tr -cs '[:alpha:]' '\n' < user-manual.txt | less | grep -E ........ | sort | uniq -c | sort -rn | head
+  198  ping ya.ru
+  199  curl wttr.in
+  200  hostname -I
+  201  curl ifconfig.me
+  202  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md | less
+  203  man wget
+  204  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md | less
+  205  ls
+  206  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md
+  207  sudo yum -y install wget
+  208  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md
+  209  sudo wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md
+  210  sudo wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md | less
+  211  less README-ru.md
+  212  sudo id
+  213  id
+  214  sudo less /var/log/messages
+  215  less /var/log/messages
+  216  su
+  217  history > ~/lab1_history.txt
