@@ -1,0 +1,48 @@
+.:
+итого 20
+drw-rw-r--. 2 centos centos    22 сен 29 12:00 dir
+-rw-r-----. 1 root   centos     5 сен 29 11:55 file
+-rw-------. 1 centos centos     0 сен 29 12:36 file1
+-rw-rw-rw-. 1 centos centos     0 сен 29 12:36 file2
+-rw-rw-rw-. 1 centos centos     0 сен 29 13:26 history1.txt
+-rw-rw-rw-. 1 centos centos 12908 сен 29 13:18 history.txt
+
+./dir:
+итого 4
+-rw-rw-r--. 1 centos centos 7 сен 29 12:00 new_file
+
+  1  cd ~
+  2  mkdir test
+  3  cd test/
+  4  mk file
+  5  touch file
+  6  chmod 000 file 
+  7  echo 'test' > file 
+  8  cat file 
+  9  chmod 200 file 
+  10  ll file 
+  11  echo 'test' > file 
+  12  cat file 
+  13  chmod 240 file 
+  14  ll file 
+  15  cat file 
+  16  chmod 640 file 
+  17  ls -l file 
+  18  cat file 
+  19  mkdir dir 
+  20  touch dir/new_file
+  21  echo 'file 2' > dir/new_file 
+  22  chmod ugo-x dir/
+  23  cat dir/new_file 
+  24  rm dir/new_file 
+  25  chown root ./dir/
+  26  chown root:root ./dir/
+  27  chgrp root file
+  28  umask 0077 && touch file1 && ll file1
+  29  umask 0000 && touch file2 && ll file2
+  30  cat file
+  31  ll file
+  32  sudo chmod g+r file
+  33  cat file
+  34  ls -lR
+  35  history 
