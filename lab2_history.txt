@@ -8,8 +8,9 @@ drw-rw-r--. 2 centos centos    22 сен 29 12:00 dir
 -rw-rw-rw-. 1 centos centos 12908 сен 29 13:18 history.txt
 
 ./dir:
-итого 4
--rw-rw-r--. 1 centos centos 7 сен 29 12:00 new_file
+ls: невозможно получить доступ к ./dir/new_file: Отказано в доступе
+итого 0
+-????????? ? ? ? ?            ? new_file
 
   1  cd ~
   2  mkdir test
