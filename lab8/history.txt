@@ -1,0 +1,39 @@
+  889  cd ~
+  890  ldd /bin/login | grep pam
+  891  ls -l /lib64/libpam*
+  892  ls -l /lib64/security/
+  893  vi /etc/pam.d/system-auth
+  894  vi /etc/pam.d/su
+  895   auth sufficient pam_permit.so
+  896  auth sufficient pam_permit.so
+  897  su auth sufficient pam_permit.so
+  898  sudo su auth sufficient pam_permit.so
+  899  sudo su
+  900  vi /etc/pam.d/su
+  901  cat /etc/pam.d/su
+  902  nano /etc/pam.d/su
+  903  sudo nano /etc/pam.d/su
+  904  exit
+  905  jobs
+  906  bg 1
+  907  jobs
+  908  kill 1
+  909  kill -SIGSTOP 1
+  910  kill -SIGSTOP %1
+  911  jobs
+  912  exit
+  913  touch script.c
+  914  gcc script.c -o script -lpam -lpam_misc
+  915  sudo gcc script.c -o script -lpam -lpam_misc
+  916  sudo apt-get install gcc
+  917  yum install gcc-c++
+  918  sudo yum install gcc-c++
+  919  gcc script.c -o script -lpam -lpam_misc
+  920  Shell
+  921  cd /etc/pam.d/
+  922  ls
+  923  nano check
+  924  sudo nano check
+  925  cd ~
+  926  cd Рабочий\ стол/bos/OSS-2021/lab8/
+  937  history > history.txt

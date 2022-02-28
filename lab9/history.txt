@@ -1,0 +1,71 @@
+  940   ps xaf
+  941   ps xawf -eo pid,user,cgroup,args
+  942   systemd-cgls
+  943   ls -l /usr/lib/systemd/system/
+  944   ls -l /run/systemd/system/
+  945   ls -l /etc/systemd/system/
+  946   systemctl -t help
+  947   systemctl status
+  948   systemctl --type=service
+  949   systemctl --type=target
+  950   systemctl status auditd.service
+  951   systemctl is-active auditd.service
+  952   systemctl is-enabled auditd.service
+  953   systemctl list-dependencies --after auditd.service
+  954   systemctl list-dependencies --before auditd.service
+  955   systemctl list-units --type=service
+  956   systemctl list-units --type=service --all
+  957   systemctl list-units --type=socket --all
+  958   systemctl list-unit-files --type=service
+  959   systemctl --failed --type=service
+  960   systemctl status httpd.service
+  961   systemctl start httpd.service
+  962   systemctl status httpd.service
+  963   systemctl restart httpd.service
+  964   systemctl status httpd.service
+  965   systemctl stop httpd.service
+  966   systemctl enable httpd.service
+  967   systemctl status httpd.service
+  968   systemctl start httpd.service
+  969   systemctl status httpd.service
+  970   systemctl disable httpd.service
+  971   systemctl mask httpd.service
+  972   systemctl status httpd.service
+  973   systemctl start httpd.service
+  974   systemctl unmask httpd.service
+  975   systemctl list-units --type=target
+  976   systemctl list-units --type=target --all
+  977   systemctl get-default
+  978   ls -l /etc/systemd/system/default.target
+  979   systemctl set-default multi-user.target
+  980   systemctl isolate multi-user.target
+  981   systemctl --no-wall rescue
+  982   systemctl --no-wall emergency
+  983   systemctl poweroff
+  984   systemctl halt
+  985   systemctl --no-wall poweroff shutdown --poweroff 17:20
+  986   shutdown --halt +1
+  987   shutdown -c
+  988   systemctl --no-wall reboot
+  989   systemctl suspend
+  990   systemctl hibernate
+  991   hostnamectl
+  992   timedatectl
+  993   localectl
+  994   loginctl
+  995   loginctl session-status 2
+  996   loginctl show-user user1
+  997   nano mephi.service
+  998   cat mephi.service
+  999   ls -lZ mephi.service
+  1000  journalctl -b
+  1001  ausearch -c 'systemd' --raw | audit2allow -M my-systemd
+  1002  semodule -X 300 -i my-systemd.pp
+  1003  ausearch -m avc -ts recent
+  1004  systemctl start mephi.service
+  1005  journalctl -u mephi.service
+  1006  nano mephi.path
+  1007  cat mephi.path
+  1008  systemctl enable mephi.path
+  1009  systemctl start mephi.path
+  1010  touch /tmp/mephi.file
