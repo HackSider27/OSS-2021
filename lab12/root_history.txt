@@ -1,0 +1,33 @@
+   1  semanage fcontext -l
+   2  touch ~/check_context_file
+   3  semanage fcontext -l | grep check_context_file
+   4  semanage fcontext -l | grep file
+   5  ls
+   6  mount /dev/sda2 /test/ -o defcontext="system_u:object_r:samba_share_t:s0"
+   7  dd if=/dev/zero of=./fs.img bs=1M count=10
+   8  mkfs -t ext4 /dev/loop0
+   9  losetup --find --show ./fs.img
+   10  losetup --list
+   11  mkfs -t ext4 /dev/loop0
+   12  blkid /dev/loop0
+   13  mount /dev/loop0 -o \ context="system_u:object_r:httpd_sys_content_t:s0"
+   14  mount /dev/loop0 /mnt
+   15  mount /dev/loop0 -o \ context="system_u:object_r:httpd_sys_content_t:s0"
+   16  mount /dev/loop0 -o context="system_u:object_r:httpd_sys_content_t:s0"
+   17  mount /dev/loop0 -o defcontext="system_u:object_r:httpd_sys_content_t:s0"
+   18  chcon -R -t httpd_sys_content_t /web/
+   19  mkdir /web/
+   20  chcon -R -t httpd_sys_content_t /web/
+   21  touch /etc/file1
+   22  semanage fcontext -a -t samba_share_t /etc/file1
+   23  ls -Z /etc/file1
+   24  cat /etc/selinux/targeted/contexts/files/file_contexts.local | grep file1
+   25  rm -i /etc/file1
+   26  semanage fcontext -d /etc/file1
+   27  /sbin/restorecon -R -v /web/
+   28  /sbin/restorecon -R  /etc/file1
+   29  /sbin/restorecon -v  /etc/file1
+   30  restorecon -v  /etc/file1
+   31  sesearch -T -s httpd_t -t var_log_t
+   32  sesearch -T -s httpd_t -t tmp_t
+   33  history > root_history.txt

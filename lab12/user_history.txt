@@ -1,0 +1,66 @@
+   1  ldd /bin/ls | grep selinux
+   2  ls -l /etc/selinux/
+   3  ls -l /etc/selinux/targeted/
+   4  id -Z
+   5  ls -Z /etc/passwd /etc/group /etc/shadow
+   6  ls -Z /etc/login.defs /etc/sudoers
+   7  ls -Z /usr/bin/passwd
+   8  ls -Z /usr/sbin/useradd
+   9   getfattr -n security.selinux /etc/passwd
+   10  ps Zaux
+   11  ls /proc/$$/attr
+   12  ps Z $(pgrep passwd)
+   13  netstat -tnlpZ
+   14  sestatus
+   15  getenforce
+   16  cat /sys/fs/selinux/enforce
+   17  nano /etc/selinux/config
+   19  setenforce 1
+   20  echo 1 > /sys/fs/selinux/enforce
+   21  cat /sys/fs/selinux/enforce
+   22  getsebool -a | grep httpd
+   23  seinfo
+   24  su
+   25  seinfo
+   26  seinfo -cfile -x
+   27  seinfo --class | grep file
+   28  seinfo --class file -x
+   29  seinfo --common file -x
+   30  seinfo --commonfile -x
+   31 seinfo --c -x
+   32  seinfo --help
+   33  seinfo --cdir
+   34  seinfo --cdir -x
+   35  seinfo --class | grep dir
+   36  seinfo --cdir --stats
+   37  seinfo --cdir -v
+   38  seinfo --cdir -V
+   39  seinfo --cdir -x
+   40  seinfo --cdir --expand
+   41  seinfo --cdir --l
+   42  seinfo --cdir -l
+   43  seinfo --cdir --stats
+   44  seinfo --cblk_file --stats
+   45  seinfo --cblk_file --v
+   46  seinfo --cblk_file -v
+   47  seinfo --cblk_file -h
+   48  seinfo --cblk_file -l
+   49  seinfo --cblk_file -x
+   50  seinfo --common file -x
+   51  seinfo --common dir -x
+   52  seinfo --common dir
+   53  grep 'httpd_.*_t' /etc/selinux/targeted/contexts/files/file_contexts
+   54  semanage fcontext -l
+   55  su
+   56  sesearch --allow --source passwd_t --target shadow_t --class file
+   57  ls
+   58  sesearch --allow --source passwd_t --target shadow_t --class file
+   59  sesearch -A -s passwd_t -t passwd_exec_t -c file
+   60  sesearch --allow --source passwd_t --target shadow_t --class file
+   61  sesearch -A -s passwd_t -t passwd_exec_t -c file
+   62  sesearch -A -s unconfined_t -t passwd_exec_t -c file
+   63  sesearch -A -s unconfined_t -t passwd_t -c process
+   64  sesearch --type_trans -s unconfined_t -t passwd_exec_t
+   65  sesearch --help
+   66  sesearch --role_trans -s unconfined_t -t passwd_exec_t
+   67  history > user_history.txt
