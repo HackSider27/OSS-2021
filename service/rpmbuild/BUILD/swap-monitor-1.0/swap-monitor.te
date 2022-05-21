@@ -1,0 +1,8 @@
+policy_module(swap-monitor,1.0)
+
+type swap-monitor_t;
+type swap-monitor_exec_t;
+init_daemon_domain(swap-monitor_t, swap-monitor_exec_t)
+
+# Grant swap-monitor_t the signal privilege
+allow swap-monitor_t self:process { signal };

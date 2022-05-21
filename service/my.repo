@@ -1,0 +1,6 @@
+[myrepo]
+name=my-repo
+baseurl=http://localhost/myrepo
+enabled=1
+gpgcheck=1
+gpgkey=http://localhost/mephi_project/RPM-GPG-KEY-Evs-Service
